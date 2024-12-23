@@ -1,7 +1,7 @@
 import "./Technology.css";
 import { motion, useTransform } from "framer-motion";
-import { RiRemixRunFill } from "react-icons/ri";
-export default function Technology(props) {
+import { SiSolidity } from "react-icons/si";
+export default function Technology3(props) {
   const x = useTransform(
     props.scrollYProgress,
     [0, 1],
@@ -17,7 +17,7 @@ export default function Technology(props) {
   return (
     <motion.div style={{ x, y }}>
       <div className="technologyContainer">
-        <RiRemixRunFill size={30} />
+        <SiSolidity size={30} />
         {props.text}
       </div>
     </motion.div>

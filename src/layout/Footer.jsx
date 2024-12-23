@@ -7,7 +7,7 @@ export default function Footer(props){
                 <span className="footer name">{props.personName}</span>
                 <div className="email animated-underline">azfarrazzaq23@gmail.com</div>
             </div>
-            <span>Kayser Web  |  30.289.467/0001-64  {"©"}  All Rights Reserved</span>
+            <span>Azfar Razzaq  {"©"}  All Rights Reserved</span>
         </div>
 
     )

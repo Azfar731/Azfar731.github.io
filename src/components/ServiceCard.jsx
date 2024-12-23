@@ -3,20 +3,20 @@ import './Services.css'
 
 
 
-export default function ServiceCard(){
+export default function ServiceCard({number, title1, title2, description}){
     return(
         <div className='serviceCard'>
             <div className='serviceCardNumber'>
                 <span className='greyLine'>⎯⎯⎯⎯⎯</span>
-                <span className='serviceNumber'>   01</span>
+                <span className='serviceNumber'>   {number}</span>
             </div>
             <div className='serviceTitle'>
-                <h3 className='serviceTitleLine'>WEBFLOW</h3>
-                <h3 className='serviceTitleLine'>DEVELOPMENT</h3>
+                <h3 className='serviceTitleLine'>{title1}</h3>
+                <h3 className='serviceTitleLine'>{title2}</h3>
             </div>
             <div className='serviceDescription'>
                 <p className='serviceDescriptionText'>
-                Bring your design from Figma, XD, or any other tool, and we'll turn your layout into a kickass website, super organized and following the top standards of the Webflow market.
+                {description}
                 </p>
             </div>
         </div>
