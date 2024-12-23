@@ -33,7 +33,7 @@ export default function RecentWork(props) {
           project_url={"https://moviefinderproject.netlify.app/"}
         />
         <WorkCard
-          title={"Quizlet"}
+          title={"Quizzical"}
           project_image={"Quizzicle.PNG"}
           project_url={"https://quizzicleapp.netlify.app/"}
         />
