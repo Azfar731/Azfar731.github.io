@@ -1,13 +1,17 @@
-import './WhatsAppButton.css'
-import whatsappLogo from '/src/assets/whatsappLogo.png';
+import "./WhatsAppButton.css";
+import whatsappLogo from "/src/assets/whatsappLogo.png";
 
-
-export default function WhatsAppButton(){
-    return(
-        <div className="whatsapp-button">
-            <span>Happy to chat on WhatsApp</span>
-            <img src={whatsappLogo} alt="WhatsAppLogo" />
-        </div>
-
-    )
+export default function WhatsAppButton() {
+  return (
+    <a
+      href="https://wa.me/923134549126"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="whatsapp-button">
+        <span>Happy to chat on WhatsApp</span>
+        <img src={whatsappLogo} alt="WhatsAppLogo" />
+      </div>
+    </a>
+  );
 }

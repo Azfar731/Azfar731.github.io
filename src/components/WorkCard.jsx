@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./WorkCard.css";
 import arrow from "/src/assets/icons8-arrow-32.png";
 import Flag from "react-world-flags";
-export default function WorkCard({ title, project_image }) {
+export default function WorkCard({ title, project_image, project_url }) {
   const [isHovering, setIsHovering] = useState(false);
 
   const workCardInfostyles = {
@@ -46,56 +46,58 @@ export default function WorkCard({ title, project_image }) {
   };
 
   return (
-    <div
-      className="workCard"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <img
-        src={`/projects/${project_image}`}
-        className="workCardImage"
-        alt=""
-      />
+    <a href={project_url} target="_blank" rel="noopener noreferrer">
       <div
-        style={
-          isHovering ? workCardInfostyles.hover : workCardInfostyles.default
-        }
+        className="workCard"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <div className="workCardHeading">
-          <div className="titleContainer">
-            <div
-              className={`workCardTitle textLine ${
-                isHovering ? "line1-exit" : "line1-enter"
-              }`}
-            >
-              {title}
+        <img
+          src={`/projects/${project_image}`}
+          className="workCardImage"
+          alt=""
+        />
+        <div
+          style={
+            isHovering ? workCardInfostyles.hover : workCardInfostyles.default
+          }
+        >
+          <div className="workCardHeading">
+            <div className="titleContainer">
+              <div
+                className={`workCardTitle textLine ${
+                  isHovering ? "line1-exit" : "line1-enter"
+                }`}
+              >
+                {title}
+              </div>
+              <div
+                className={`workCardTitleHover textLine ${
+                  isHovering ? "line2-enter" : "line2-exit"
+                }`}
+              >
+                {title}
+              </div>
             </div>
-            <div
-              className={`workCardTitleHover textLine ${
-                isHovering ? "line2-enter" : "line2-exit"
-              }`}
-            >
-              {title}
-            </div>
+            <img
+              src={arrow}
+              alt="little arrow image"
+              style={
+                isHovering ? arrowImageStyles.hover : arrowImageStyles.default
+              }
+            />
           </div>
-          <img
-            src={arrow}
-            alt="little arrow image"
-            style={
-              isHovering ? arrowImageStyles.hover : arrowImageStyles.default
-            }
-          />
-        </div>
-        <div className="workCardLocation">
-          {/* <img src={flag} alt="usa flag" className="locationFlag" /> */}
-          <Flag code={"PK"} className="locationFlag" />
-          <span className="locationText">Pakistan</span>
-        </div>
-        <div className="workCardPartners">
-          Developed By: AzfarRazzaq <span className="dot">•</span> Designed By:
-          AzfarRazzaq
+          <div className="workCardLocation">
+            {/* <img src={flag} alt="usa flag" className="locationFlag" /> */}
+            <Flag code={"PK"} className="locationFlag" />
+            <span className="locationText">Pakistan</span>
+          </div>
+          <div className="workCardPartners">
+            Developed By: AzfarRazzaq <span className="dot">•</span> Designed
+            By: AzfarRazzaq
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
