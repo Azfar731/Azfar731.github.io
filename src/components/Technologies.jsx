@@ -39,26 +39,26 @@ export default function Technologies() {
         <Technology
           text={"Remix"}
           scrollYProgress={scrollYProgress}
-          x={{ start: "0rem", end: "5rem" }}
-          y={{ start: "0rem", end: "15rem" }}
+          x={{ start: "0rem", end: "10rem" }}
+          y={{ start: "0rem", end: "20rem" }}
         />
         <Technology2
           text={"React"}
           scrollYProgress={scrollYProgress}
-          x={{ start: "0rem", end: "-10rem" }}
-          y={{ start: "0rem", end: "-15rem" }}
+          x={{ start: "0rem", end: "-5rem" }}
+          y={{ start: "0rem", end: "-20rem" }}
         />
         <Technology3
           text={"Solidity"}
           scrollYProgress={scrollYProgress}
-          x={{ start: "0rem", end: "-10rem" }}
+          x={{ start: "0rem", end: "-2rem" }}
           y={{ start: "0rem", end: "25rem" }}
         />
         <Technology4
           text={"Typescript"}
           scrollYProgress={scrollYProgress}
-          x={{ start: "0rem", end: "0rem" }}
-          y={{ start: "0rem", end: "-15rem" }}
+          x={{ start: "0rem", end: "-5rem" }}
+          y={{ start: "0rem", end: "-20rem" }}
         />
       </div>
     </div>
