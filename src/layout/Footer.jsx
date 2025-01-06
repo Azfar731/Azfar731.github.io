@@ -9,6 +9,5 @@ export default function Footer(props){
             </div>
             <span>Azfar Razzaq  {"©"}  All Rights Reserved</span>
         </div>
-
     )
 }
